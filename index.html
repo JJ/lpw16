@@ -1,43 +1,62 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Teaching programming as if it were 2016</title>
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+    <link rel="stylesheet" href="css/extra.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
 
-		<title>reveal.js</title>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	
+	<section><h2>Teaching/learning
+	    programming</h2>
+	  <h1 class='fragment'>Let's do it
+	    <span class='bkg'>right</span></h1>
+	  <h2 class='fragment'><code>@jjmerelo</code> |
+	    <code>JMERELO@cpan.org</code></h2>
+		
+	</section>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/moon.css">
-		<link rel="stylesheet" href="css/extra.css">
+	<section data-background='img/Sherlock.jpg'>
+	  <aside class='notes'>We are very close to Baker Street, and today it's been 90 years since Agatha Christie disappear. Also it's 2016. It's the right place and time to tackle a mystery. Which is why every single language starts with teaching you how to print "Hello world" to a console.</aside />
+	</section>
+	
+	<section>
+	  <img src='img/everysingle.png' alt='faking till you make it'>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-		  <div class="slides">
-		    <section><h2>Teaching/learning
-		      programming</h2>
-		      <h1 class='fragment'>Let's do it
-			<span class='bkg'>right</span></h1>
-		      <h2 class='fragment'><code>@jjmerelo</code> |
-			<code>JMERELO@cpan.org</code></h2>
-
-		    </section>
-
-		    <section>
-
-		      <section>
-			<pre><code>object MaxOnes extends Function1[Vector[Boolean],Double]
+	  <aside class='notes'>You still have to learn new stuff, and that's most likely the book you are using. How many of you don't have formal computer science training?</aside>
+	</section>
+	      
+	<section>
+	  <section>
+	    <h1>Change is <em>nigh</em></h1>
+	  </section>
+	  
+	  <section data-background='https://farm6.staticflickr.com/5710/30565769074_04988d431e_k_d.jpg' alt='jars'>
+	    <h1>(Programming) Languages all look the same</h1>
+	  </section>
+		
+	  <section>
+		  <pre><code>object MaxOnes extends Function1[Vector[Boolean],Double]
        with Fitness[Vector[Boolean],Double] {
 
   def Fitness( ev: Vector[Boolean]):Double = 
@@ -47,26 +66,91 @@
   def apply(v1: Vector[Boolean]): Double = Fitness( v1 )
 
 }</code></pre>
-		      <aside class='notes'>You probably can understand
+		  <aside class='notes'>You probably can understand
 			this even if you don't have formal education in Scala</aside>
-		      </section>
+	  </section>
 
-		      <section>
-			<pre><code>onemax :: Seq Bool -> Int
+	  <section>
+	    <pre><code>onemax :: Seq Bool -> Int
 onemax v = 
     Data.Foldable.foldl (\y -> (\x -> if x then y+1 else y)) 0 v
 </code></pre>
 
-			<aside class='notes'>You can't probably figure
-			out this one... but maybe you should. It's
-			functional, pretty few formal learning
-			includes functional. That's why maybe, just
-			maybe, you, and me, and everyone, needs a new
-			  way of doing this.</aside>
-		      </section>
+	    <aside class='notes'>You can't probably figure
+	      out this one... but maybe you should. It's
+	      functional, pretty few formal learning
+	      includes functional. That's why maybe, just
+	      maybe, you, and me, and everyone, needs a new
+	      way of doing this.</aside>
+	  </section>
 
-		  </div>
-		</div>
+	  <section>
+	    <h1>They have a <em>finite</em> lifespan</h1>
+	    <aside class='notes'>Even a single language will change and evolve and sometimes even stop looking the same</aside></section>
+	  
+	  <section><h1><em>Never</em> stop learning</h1>
+	    <aside class='notes'>So it's good if have a head start</aside>
+	  </section>
+
+	  <section><h1><em>Surrender</em> to change</h1></section>
+	  
+	</section>
+
+	<section>
+	  <section><h1><em>Real</em> tasks</h1></section>
+	  <section><h1><em>Real</em> code</h1></section>
+	  <section><h1><em>Any</em> language</h1></section>
+	  <section><h1>Embrace the <em>Internet</em></h1></section>
+	  <section><h1>Stand in the shoulders of giants</h1></section>
+	  <section><h1><em>Empower </em>the user</h1></section>
+	  <section><h1>There is no <em>true</em> paradigm</h1>
+	    <h2 class='fragment'>But functional looks pretty awesome</h2></section>
+	  
+	  <section><h1>Teach <em>ecosystems</em></h1></section>
+	  <section><h1>Softwaree has <em>free</em> in it</h1></section>
+	</section>	
+	
+	<section>
+	  <section><h1>Why would anyone want to follow this manifesto?</h1></section>
+	  <section><h1>Go full stack</h1>
+	    <h2 class='fragment'>And full event queue, full log, full datastore, full *</h2>
+	  </section>
+
+	  <section><h1><em>Polyglot</em> is the norm</h1>
+	    <aside class='note'>Maybe it's always been, only we didn't have a word to call it</aside>
+		      </section>
+		      <section><h1>Hit the ground running</h1></section>
+
+		      <section><h1>Get the job done</h1></section>
+	</section>
+
+	<section>
+	  <section><h1>Some highlights</h1></section>
+
+	  <section><h1>Start with <em>expressions</em></h1></section>
+	  <section><h1><em>Functions</em> are a thing</h1></section>
+	  <section><h1>Pay attention to <em>errors</em></h1></section>
+	  <section><h1>Do stuff in the <em>cloud</em></h1></section>
+	</section>
+
+	<section>
+	  <section data-background='https://farm6.staticflickr.com/5463/31243345612_a068c4dd6b_k_d.jpg'>
+	    <aside class='notes'>Perl is great, paradigm-agnostic. Only it's not popular. Which we don't really care. But it's an issue if we want a vibrant, diverse, great community.</aside>
+	  </section>
+
+	  <section>
+	    <h1>I need you</h1>
+	    <h2><code>github.com/JJ/prog21</code></h2>
+	  </section>
+
+	</section>
+
+	<section data-background='img/BakerStreet.jpg'>
+	  <h1>Thanks!</h1>
+	</section>
+	
+      </div>
+    </div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
